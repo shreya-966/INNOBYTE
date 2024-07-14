@@ -1,13 +1,781 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100%;
+}
+.header{
+    background-image: url(../public/assets/ayodhya.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 680px;
+}
+.barlines{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+.close{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+#nav_links{
+    padding: 10px;
+    display: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-start: 2.2rem;
+    padding-inline-end: 2.2rem;
+    padding-top: 0.8rem;
+    font-size: 1.3rem;
+}
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+.logo{
+    width: 9.375rem;
+}
+.logo a{
+    color: aliceblue;
+    text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav_links a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.nav_links a:hover{
+    border-bottom: 2px solid aliceblue;
+    border-radius: 5px;
+    padding-bottom: 0.5rem;
+    transition: border-bottom  0.5s ease-in-out 0.5s smooth;
+}
+.btn{
+    border: transparent;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0.8rem;
+    color: aliceblue;
+    font-weight: 500;
+    background-color: #5ba7e9;
+    cursor: pointer;
+}
+.para_style{
+    visibility: visible;
+    opacity: 0.6;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    animation: appearance 0.5s ease-in 0.5s 1 both;
+    }
+@keyframes appearance{
+    0%{
+        margin-top: 6rem;
+        opacity: 0;
+    }
+    100%{
+        margin-top:4rem;
+        opacity: 0.6;
+    }
+}
+.header_container{
+    padding-block: 10rem 5rem;
+}
+.section_container{
+    max-width: 75rem;
+    padding: 3rem 1rem;
+    margin: auto;
+}
+.heading_style{
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 4.5rem;
+    text-align: center;
+    color: white;
+    visibility: visible;
+    opacity: 1;
+    animation: appearance-1 0.5s ease-in 0.5s 1 both;
+    animation-delay: 1s;
+}
+@keyframes appearance-1{
+    0%{
+        margin-top: 6rem;
+        opacity: 0;
+    }
+    100%{
+        margin-top:4rem;
+        opacity: 1;
+    }
+}
+.heading_style span{
+    color: #90caf9;
+    font-weight: 700;
+}
+.booking_container{
+    padding-block: 0;
+}
+.booking{
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center ;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    border-radius: 10px;
+    transform: translateY(-50%);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+.ingrp{
+    flex: 1 1 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.btn-2{
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.5s;
+    background-color: #00b4d8;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+}
+.about-image img{
+    max-width: 450px;
+    margin: auto;
+    border-radius: 0.5rem;
+    display: flex;
+    width: 100%;
+}
+@keyframes img{
+    0%{
+        width: 0;
+        opacity:1;
+    }
+    100%{
+        width: 450px;
+        opacity: 1;
+    }
+}
+.subheading {
+    margin-bottom: 0.75rem;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: black;
+    visibility: visible;
+    font-size: 1.2rem;
+    color: #0da7bf;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    animation: appear 0.5s ease-in 0.5s 1 both;
+}
+@keyframes appear{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    100%{
+        bottom: 10px;
+        opacity: 1;
+    }
+}
+/*To add a line after about us */
+.subheading::after {
+    content: '';
+    flex: 1;
+    height: 2px; 
+    background: black; 
+}
+.subheading::after {
+    margin-left: 10px;
+}
+.heading{
+    max-width: 600px;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: black;
+}
+.section_description{
+    max-width: 600px;
+    margin-bottom: 1rem;
+    color: rgb(90, 86, 86);
+    font-family: "Baskervville SC", serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+h4{
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+h4 a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    color: #3c72a8;
+}
+.btn-3{
+    border: transparent;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0.8rem;
+    color: aliceblue;
+    font-weight: 600;
+    background-color: #5ba7e9;
+    cursor: pointer;
+}
+
+.subheading-rooms{
+    margin-bottom: 0.75rem;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: black;
+    visibility: visible;
+    font-size: 1.5rem;
+    color: #0da7bf;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.subheading-rooms::after {
+    content: '';
+    flex: 1;
+    height: 2px; 
+    background: black; 
+}
+.subheading-rooms::after {
+      margin-left: 10px;
+}
+.grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aliceblue;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.room-struct{
+    margin-top: 4rem;
+    display: grid;
+    gap: 1rem;
+    border-radius: 0.625rem;
+    width: 20rem;
+    height: 33rem;
+    margin: 0.5rem;
+}
+.heading-room{
+    max-width: 600px;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.room-cards {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    animation: roomcard 2s ease 0.5s 1 both;
+}
+@keyframes roomcard{
+    0%{
+        margin-top: 40px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+.card-image{
+    position: relative;
+    isolation: isolate;
+}
+.card-image img{
+    width: 25rem;
+    height: 18rem;
+    border-radius: 0.625rem;
+}
+.icons{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    z-index: 1;
+}
+.heart{
+   color: #90caf9;
+   opacity: 1;
+   cursor: pointer;
+   border: 2px solid white;
+   background-color: rgb(240, 247, 253);
+   border-radius: 50%;
+}
+.paint{
+    color: rgb(124, 124, 243);
+   opacity: 1;
+   cursor: pointer;
+   border: 2px solid white;
+   background-color: aliceblue;
+   border-radius: 50%;
+}
+.down{
+    color: rgb(204, 160, 204);
+   opacity: 1;
+   cursor: pointer;
+   border: 2px solid white;
+   background-color: aliceblue;
+   border-radius: 50%;
+}
+.room-details h4{
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: "Baskervville SC", serif;
+    color: #3c72a8;
+    font-weight: 900;
+}
+.room-details p{
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Wittgenstein", serif;
+    margin-bottom: 0.5rem;
+}
+.room-details h5{
+    padding-top: 10px;
+    margin-left: 1rem;
+    font-family: "Wittgenstein", serif;
+    font-size: 0.9rem;
+    color: gray;
+    font-weight: 700;
+    font-style: normal;
+}
+.room-details h5 span{
+    font-style: normal;
+    color: black;
+}
+.room-details button{
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.service{
+    background-image: url('../public/assets/texture6.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    border-radius: 20px;
+}
+.service__container {
+    padding-block: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card-struct{
+    border: 2px solid transparent;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    margin-top: 4rem;
+    display: grid;
+    gap: 1rem;
+    border-radius: 0.625rem;
+    width: 25rem;
+    height: 22rem;
+    margin: 0.5rem;
+}
+.service-img img{
+    width: 24.6rem;
+    height: 14rem;
+    border-radius: 20px;
+    align-items: center;
+    padding: 10px;
+}
+.service-detail h4{
+    font-size: 1.5rem;
+    margin: 0;
+    color: rgb(4, 16, 26);
+    padding-left: 10px;
+    text-align: center;
+    font-family: "Wittgenstein", serif;
+    text-decoration: underline;
+}
+.service-detail p{
+    font-size: 1rem;
+    text-align: center;
+    padding-left: 10px;
+    font-weight: 600;
+    font-family: "Wittgenstein", serif;
+    color: white;
+}
+.contain{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+.content h2{
+    font-size: 2.5rem;
+    font-family: "Wittgenstein", serif;
+    color: black;
+    display: inline;
+    font-weight: 700;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+}
+.content p{
+    color: black ;
+    font-family: "Wittgenstein", serif;
+}
+.banner_content{
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+    background-color: aliceblue;
+}
+.banner-card{
+    text-align: center;
+    flex: 1 1 180px;
+}
+.banner-card h4{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+    color: black;
+}
+.banner-card p{
+    color: gray;
+    font-size: 1rem;
+}
+/*Gallary page*/
+.gallary-head{
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    margin-left: 540px;
+    font-family: cursive;
+    color: #3c72a8;
+    font-weight: 700;
+}
+.gallary-head::after{
+   right: -60px;
+}
+.gallary-head::before{
+    left: -60px;
+}
+.gallary-head::after,.gallary-head::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 2px;
+    background-color: #3c72a8;
+}
+.container11 {
+    background-color: rgb(218, 234, 247);
+    box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: fit-content;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.img-card{
+    width: fit-content ;
+    height: fit-content;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.img-card img{
+    width: 450px;
+    border-radius: 10px;
+    height: 250px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+/*Contact*/
+.section1{
+    background-color: rgb(178, 215, 247);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom , #124559 , #598392);
+}
+.container1{
+    position: relative;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+    margin-top: auto;
+}
+.container1 .contactInfo1 {
+    background: #5ba7e9;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 30px;
+    width: 350px;
+    height: 450px;
+    position: absolute;
+    left: 0;
+    top: -30px;
+}
+.container1 .contactInfo1 h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+.container1 .contactInfo1 ul.info {
+    position: relative;
+    margin: 20px 0;
+}
+.container1 .contactInfo1 ul.info li {
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+}
+.container1 .contactInfo1 ul.info li span:nth-child(1) {
+    width: 30px;
+    min-width: 30px;
+}
+.container1 .contactInfo1 ul.info li span:nth-child(1) img {
+    max-width: 100%;
+    filter: invert(1);
+    display: flex;
+    width: 100%;
+}
+.container1 .contactInfo1 ul.info li span:nth-child(2) {
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+.container1 .contactInfo1 ul.info li span a {
+    color: #fff;
+    text-decoration: none;
+    min-width: 30px;
+}
+.container1 .contactInfo1 ul.sci {
+    position: relative;
+    display: flex;
+}
+.container1 .contactInfo1 ul.sci li {
+    list-style: none;
+    margin-right: 15px;
+}
+.container1 .contactInfo1 ul.sci li a {
+    text-decoration: none;
+}
+.container1 .contactInfo1 ul.sci li a img {
+    filter: invert(1);
+}
+.container1 .contactForm1{
+    background-color: white;
+    padding: 3rem;
+    padding-left: 11rem;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    width: 900px;
+    height: 450px;
+    margin-left: 200px;
+}
+.container1 .contactForm1 h2{
+    color: #5ba7e9;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: "Wittgenstein", serif;
+}
+.container1 .contactForm1 .formBox1 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.container1 .contactForm1 .formBox1 .inputBox1 {
+    position: relative;
+}
+.container1 .contactForm1 .formBox1 .inputBox1.w50 {
+    width: 47%;
+}
+.container1 .contactForm1 .formBox1 .inputBox1 span {
+    position: absolute;
+    left: 0;
+    padding: 1px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+.container1 .contactForm1 .formBox1 .inputBox1 input, .container1 .contactForm1 .formBox1 .inputBox1 textarea {
+    width: 100%;
+    resize: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+.container1 .contactForm1 .formBox1 .inputBox1 span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+.container1 .contactForm1 .formBox1 .inputBox1.w100 {
+    width: 100%;
+}
+.container1 .contactForm1 .formBox1 .inputBox1 input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    background: #5ba7e9;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+    margin-top: 4rem;
+}
+/*FOOTER*/
+footer{
+    background-color: black;
+}
+.footer-container {
+    gap: 4rem 2rem;
+    display: flex;
+    height: 80vh;
+    justify-content: space-between;
+}
+.footer_col{
+    width: 90%;
+    height: 60vh;
+}
+.footer_col h4{
+    font-size: 1.5rem;
+    font-family: "Wittgenstein", serif;
+    font-weight: 800;
+    padding-left: 0.8rem;
+    margin-bottom: 30px;
+    color: white;
+}
+.footer_col .footer_links li{
+   list-style: none;
+   padding: 0.5rem; 
+   font-size: 1rem;
+}
+.footer_col .footer_links li a{
+    text-decoration: none;
+    color: gray;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+.footer-col .description{
+    text-decoration: none;
+    color: gray;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    width: 80%;
+    line-height: 30px;
+}
+.footer-col .logo .logo1{
+    font-family: "Wittgenstein", serif;
+    width: 19rem;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    word-spacing: 8px;
+    margin-bottom: 30px;
+}
+.footer_socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+    border-radius: 20px;
+}
+.footer_socials img{
+    width: 40px;
+    height: 40px;
+}
+.footer_bar{
+    text-align: center;
+    color: gray;
+    padding-bottom: 0.7rem;
+}
+.btn-footer{
+    border: transparent;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0.8rem;
+    color: aliceblue;
+    font-weight: 600;
+    background-color: #5ba7e9;
+    cursor: pointer;
+    margin-top: 4rem;
 }

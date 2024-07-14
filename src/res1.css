@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media (width>768px) and (width<799px)  {
+    .header{
+        background-image: url(../public/assets/ayodhya.webp);
+        background-position: top 30% right 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 1200px;
+        height: 120vh;
+        padding-right: 1rem;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+    }
+    .nav_links{
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+    .nav_btn{
+        gap: 2rem;
+    }
+
+    .section_container{
+        width: 144.2vw;
+        margin-left: 2.5rem;
+    }
+    .booking_container{
+        align-self: center;
+    }
+    .about{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        height: 130vh;
+        width: 1150px;
+       
+    }
+    .about-image img{
+        animation: none;
+        height: 600px;
+        width: max-content;
+        margin: auto;
+    }
+    .service_container{
+        background-image: url(../public/assets/texture6.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 145vw;
+    }
+    .subheading{
+        font-size: 1.5rem;
+    }
+    .content h2{
+        font-size: 3rem;
+    }
+    .banner{
+        margin-top: 3rem;
+    }
+    .gallary-head{
+        margin-left: 30rem;
+    }
+    .container11{
+        width: 1200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    #contact{
+        width: 1200px;
+    }
+    .container1{
+        margin-top: 5rem;
+        padding-bottom: 2rem;
+    }
+    .contactInfo1{
+        margin-left: 1rem;
+    }
+    .footer{
+        width: 1200px;
+    }
+    .footer_bar{
+        margin-top: 2rem;
+    }
+}
+@media (width < 768px) {
+    .barlines{
+        font-size: 30px;
+        display: inline;
+    }
+    #nav_links1{
+        display: block;
+        position: sticky;
+    }
+    .close-1{
+        font-size: 30px;
+        display: block;
+    }
+    .close{
+        display: block;
+        position: sticky;
+        right: 20px;
+    }
+    .header_container{
+        margin-top: 6rem;
+    }
+    .header{
+        width: 1100px;
+        height: 140vh;
+    }
+    .nav_links{
+        display: none;
+    }
+    .para_style{
+        font-size: 50px;
+    }
+    .heading_style{
+        font-size: 100px;
+        text-wrap: wrap;
+    }
+    nav{
+        background-color: #3f8bb4;
+        padding-bottom: 10px;
+    }
+    .btn{
+        font-weight: 600;
+        display: none;
+    }
+    .booking_container{
+        width: 1000px;
+        margin-left: 3rem;
+    }
+    .about{
+        width: 1100px;
+        display: block;
+        gap: 2rem;
+    }
+    .about-image img{
+        height: 600px;
+        width: 450px;
+        margin-bottom: 2rem;
+    }
+    .about_content{
+        width: 1000px;
+        margin-left: 2rem;
+        padding: 1rem;
+    }
+    .heading{
+        display: inline;
+        margin-bottom: 1rem;
+    }
+    .section_description{
+        display: inline;
+    }
+    .rooms{
+        width: 1100px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
+    .subheading-rooms{
+        margin-left: 1rem;
+    }
+    .heading-room{
+        display: inline;
+        margin-left: 1rem;
+    }
+    .grid{
+        margin-left: 1rem;
+    }
+    .service{
+        width: 1100px;
+    }
+    .banner{
+        width: 1100px;
+        border-radius: 5px;
+    }
+    .container11{
+        width: 1100px;
+        padding-bottom: 2rem;
+    }
+    .section1{
+        width: 1100px;
+    }
+    .footer{
+        width: 1100px;
+    }
+}
+@media (max-width: 350px){
+    .header{
+        height: 200vh;
+        width: 400vw;
+    }
+    .nav_bar{
+        font-size: 2rem;
+    }
+    .nav_links{
+        font-size: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .para_style{
+        font-size: 50px;
+    }
+    .heading_style{
+        font-size: 110px;
+    }
+    .section_container{
+        word-wrap: break-word;
+        flex-wrap: wrap ;
+    }
+    .booking_container{
+        width: 1000px;
+    }
+    .btn-2{
+        font-size: 40px;
+    }
+    .about{
+        margin-left: 40px;
+    }
+    .about-image{
+        align-items: center;
+    }
+    .about_content .subheading{
+        font-size: 40px;
+    }
+    .about_content .heading{
+        font-size: 60px;
+    }
+    .section_description{
+        font-size: 40px;
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .about_content h4 a{
+        font-size:50px;
+    }
+    .btn-3{
+        font-size: 30px;
+    }
+    .rooms{
+        height: 150vh;
+    }
+    .subheading-rooms{
+        font-size: 40px;
+    }
+    .heading-room{
+        font-size: 60px;
+        padding-bottom: 60px;
+    }
+    .grid{
+        margin-top: 50px;
+        width: 1150px;
+    }
+    .room-cards{
+        overflow-y: scroll;
+    }
+    .room-details h4{
+        font-size: 30px;
+    }
+    .room-details p{
+        font-size: 30px;
+    }
+    .room-details h5{
+        font-size: 40px;
+    }
+    .service_container{
+        width: 1300px;
+        background-image: url(../public/assets/texture6.jpg);
+        background-position: right;
+        margin-left: 50px;
+    }
+    .banner{
+        width: 1200px;
+        margin-left: 50px;
+    }
+    .container11{
+        width: 1300px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .section1{
+        width: 1300px;
+        height: 110vh;
+    }
+    .footer{
+        width: 1300px;
+        height: 1800px;
+    }
+    .footer-container{
+        justify-content: center;
+        text-align: center;
+        padding-left: 20px;
+    }
+    .footer_col{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer_col h4{
+        font-size: 60px;
+    }
+    .footer_col .description {
+        font-size: 50px;
+    }
+    .logo a h4{
+        text-align: center;
+        font-size: 90px;
+        margin-left: 25rem;
+    }
+    .btn-footer{
+        align-items: center;
+    }
+    .footer_bar{
+    display: none;
+    }
+}
